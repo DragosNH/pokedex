@@ -39,11 +39,35 @@ body{
 }
 
 /* --------- Main --------- */
+.title{
+    font-size: 3.5em;
+    margin: 0;
+    color: var(--main-blue);
+}
+
 .search-bar{
     border: 5px solid var(--main-blue);
+    border-radius: 5px;
     background-color: var(--main-yellow);
+    color: var(--main-blue);
     font-size: 1.6em;
-    width: 250px;
+    width: 300px;
+    font-family: 'Andy pro';
+    box-shadow: 10px 10px 10px var(--secondary-yellow);
+}
+
+.btn{
+    border: 5px solid var(--main-blue);
+    border-radius: 5px;
+    background-color: var(--main-yellow);
+    color: var(--main-blue);
+    font-size: 1.6em;
+    font-family: 'Andy pro';
+    box-shadow: 10px 10px 10px var(--secondary-yellow);
+}
+
+.btn:active{
+    background-color: var(--secondary-yellow);
 }
 
 
