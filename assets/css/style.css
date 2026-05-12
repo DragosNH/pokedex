@@ -25,6 +25,7 @@ body{
     font-family: 'Andy Pro';
 }
 
+/* --------- Header --------- */
 .header{
     background-color: var(--main-red);
     margin: 0;
@@ -37,6 +38,16 @@ body{
     margin: 20px;
 }
 
+/* --------- Main --------- */
+.search-bar{
+    border: 5px solid var(--main-blue);
+    background-color: var(--main-yellow);
+    font-size: 1.6em;
+    width: 250px;
+}
+
+
+/* --------- Footer --------- */
 .footer{
     width: 100vw;
     height: 100px;
