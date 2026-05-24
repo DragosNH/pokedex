@@ -29,25 +29,19 @@ pokedex =   [
     }
 ]
 
+const search = document.querySelector(".search-bar");
+
 const main = document.querySelector(".main");
 const divContainer = document.createElement("div");
 divContainer.classList = "container";
 
 let title = document.createElement("h2");
 
-/*
-const matchingUsers = users.filter(obj => obj.id === 2);
+// title.innerText = pokedex.find(pokemon => pokemon.id === 4).name;
 
-// Access the first match's property
-if (matchingUsers.length > 0) {
-  const name = matchingUsers[0].name;
-  console.log(name); // Output: "Bob"
+const pokemonFinder = (val) => {
+
 }
-*/
-
-title.innerText = pokedex.find(pokemon => pokemon.id === 4).name;
-
-
 
 divContainer.appendChild(title);
 main.appendChild(divContainer);
