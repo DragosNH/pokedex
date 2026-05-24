@@ -1,4 +1,4 @@
-pokedex =   [
+pokedex = [
     {
         id: 1,
         name: "Bulbasaur",
@@ -45,6 +45,8 @@ pokeType.classList = "type";
 let pokeImg = document.createElement("img");
 pokeImg.classList.add("pokeImg");
 
+let pokeDescription = document.createElement("p");
+
 
 pokeForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -54,12 +56,16 @@ pokeForm.addEventListener("submit", (e) => {
 
     if (!pokemon) {
         title.innerText = "No Pokémon found";
+        pokeImg.src = "";
+        pokeType.innerText = "";
+        pokeDescription.innerText = "";
         return;
     }
 
     title.innerText = pokemon.name;
     pokeImg.src = pokemon.image;
     pokeType.innerText = pokemon.type;
+    pokeDescription.innerText = pokemon.description;
 
     search.value = "";
 });
@@ -68,5 +74,6 @@ pokeForm.addEventListener("submit", (e) => {
 divContainer.appendChild(title);
 divContainer.appendChild(pokeImg);
 divContainer.appendChild(pokeType);
+divContainer.appendChild(pokeDescription);
 
 main.appendChild(divContainer);
