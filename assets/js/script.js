@@ -37,11 +37,18 @@ divContainer.classList = "container";
 
 let title = document.createElement("h2");
 
-// title.innerText = pokedex.find(pokemon => pokemon.id === 4).name;
 
 const pokemonFinder = (val) => {
-
+    
+    title.innerText = pokedex.find(pokemon => pokemon.id === val).name;
+    
+    return title.innerText
 }
+
+console.log(pokemonFinder(3));
+
+
+search.addEventListener("send", pokemonFinder(search.innerHTML));
 
 divContainer.appendChild(title);
 main.appendChild(divContainer);
