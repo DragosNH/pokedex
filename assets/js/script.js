@@ -2,28 +2,32 @@ pokedex = [
     {
         id: 1,
         name: "Bulbasaur",
-        type: "Grass, Poison",
+        type1: "Grass",
+        type2: "Poison",
         description: "For some time after its birth, it uses the nutrients that are packed into the seed on its back in order to grow.",
         image: "assets/images/pokemons/0001.png"
     },
     {
         id: 2,
         name: "Ivysaur",
-        type: "Grass, Poison",
+        type1: "Grass",
+        type2: "Poison",
         description: "The more sunlight Ivysaur bathes in, the more strength wells up within it, allowing the bud on its back to grow larger.",
         image: "assets/images/pokemons/0002.png"
     },
     {
         id: 3,
         name: "Venusaur",
-        type: "Grass, Poison",
+        type1: "Grass",
+        type2: "Poison",
         description: "While it basks in the sun, it can convert the light into energy. As a result, it is more powerful in the summertime.",
         image: "assets/images/pokemons/0003.png"
     },
     {
         id: 4,
         name: "Charmander",
-        type: "Fire",
+        type1: "Fire",
+        type2: "",
         description: "The flame on its tail shows the strength of its life-force. If Charmander is weak, the flame also burns weakly.",
         image: "assets/images/pokemons/0004.png"
     }
@@ -39,8 +43,10 @@ divContainer.classList = "container";
 
 // ------ Created items ------
 let title = document.createElement("h2");
-let pokeType = document.createElement("p");
-pokeType.classList = "type";
+let pokeTypeOne = document.createElement("p");
+let pokeTypeTwo = document.createElement("p");
+pokeTypeOne.classList = "type";
+pokeTypeTwo.classList = "type";
 
 let pokeImg = document.createElement("img");
 pokeImg.classList.add("pokeImg");
@@ -57,23 +63,30 @@ pokeForm.addEventListener("submit", (e) => {
     if (!pokemon) {
         title.innerText = "No Pokémon found";
         pokeImg.src = "";
-        pokeType.innerText = "";
+        pokeTypeOne.innerText = "";
+        pokeTypeTwo.innerText = "";
         pokeDescription.innerText = "";
         return;
     }
 
     title.innerText = pokemon.name;
     pokeImg.src = pokemon.image;
-    pokeType.innerText = pokemon.type;
+    pokeTypeOne.innerText = pokemon.type1;
+    pokeTypeTwo.innerText = pokemon.type2;
     pokeDescription.innerText = pokemon.description;
 
     search.value = "";
 });
 
+if(pokeTypeOne.value === "Grass"){
+    type.style.backgroundColor = "green" 
+}
+
 
 divContainer.appendChild(title);
 divContainer.appendChild(pokeImg);
-divContainer.appendChild(pokeType);
+divContainer.appendChild(pokeTypeOne);
+divContainer.appendChild(pokeTypeTwo);
 divContainer.appendChild(pokeDescription);
 
 main.appendChild(divContainer);

@@ -70,6 +70,14 @@ body{
     background-color: var(--secondary-yellow);
 }
 
+.container{
+    border: 5px solid var(--main-red);
+    border-radius: 15px;
+    background-color: var(--main-yellow);
+    margin: 35px auto;
+    padding: 10px 25px;
+}
+
 
 /* --------- Image --------- */
 .pokeImg {
