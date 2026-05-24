@@ -29,6 +29,8 @@ pokedex =   [
     }
 ]
 
+
+const pokeForm = document.querySelector(".pokeForm")
 const search = document.querySelector(".search-bar");
 
 const main = document.querySelector(".main");
@@ -38,17 +40,21 @@ divContainer.classList = "container";
 let title = document.createElement("h2");
 
 
-const pokemonFinder = (val) => {
-    
-    title.innerText = pokedex.find(pokemon => pokemon.id === val).name;
-    
-    return title.innerText
-}
 
-console.log(pokemonFinder(3));
+pokeForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
+    const val = Number(search.value);
+    const pokemon = pokedex.find(p => p.id === val);
 
-search.addEventListener("send", pokemonFinder(search.innerHTML));
+    if (!pokemon) {
+        title.innerText = "No Pokémon found";
+        return;
+    }
+
+    title.innerText = pokemon.name;
+});
+
 
 divContainer.appendChild(title);
 main.appendChild(divContainer);
