@@ -71,6 +71,12 @@ body{
 }
 
 
+/* --------- Image --------- */
+.pokeImg {
+    width: 250px;
+}
+
+
 /* --------- Footer --------- */
 .footer{
     width: 100vw;
