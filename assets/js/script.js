@@ -37,7 +37,7 @@ pokedex = [
 const pokeForm = document.querySelector(".pokeForm")
 const search = document.querySelector(".search-bar");
 
-const main = document.querySelector(".main");
+const cardArea = document.querySelector(".card-area");
 
 pokeForm.addEventListener("submit", (e) => {
     // ------ Created items ------
@@ -79,7 +79,7 @@ pokeForm.addEventListener("submit", (e) => {
 
     search.value = "";
 
-    switch(pokemon.type1){
+    switch (pokemon.type1) {
         case "Grass":
             pokeTypeOne.style.backgroundColor = "Green";
             pokeTypeOne.style.color = "White";
@@ -88,15 +88,23 @@ pokeForm.addEventListener("submit", (e) => {
             pokeTypeOne.style.backgroundColor = "Purple";
             pokeTypeOne.style.color = "White";
             break;
+        case "Fire":
+            pokeTypeOne.style.backgroundColor = "Darkorange";
+            pokeTypeOne.style.color = "White";
+            break;
     }
 
-    switch(pokemon.type2){
+    switch (pokemon.type2) {
         case "Grass":
             pokeTypeTwo.style.backgroundColor = "Green";
             pokeTypeTwo.style.color = "White";
             break;
         case "Poison":
             pokeTypeTwo.style.backgroundColor = "Purple";
+            pokeTypeTwo.style.color = "White";
+            break;
+        case "Fire":
+            pokeTypeTwo.style.backgroundColor = "Orange";
             pokeTypeTwo.style.color = "White";
             break;
     }
@@ -108,6 +116,7 @@ pokeForm.addEventListener("submit", (e) => {
     types.appendChild(pokeTypeOne);
     types.appendChild(pokeTypeTwo);
     divContainer.appendChild(pokeDescription);
-    main.appendChild(divContainer);
+    cardArea.innerHTML = "";
+    cardArea.appendChild(divContainer);
 
 });
