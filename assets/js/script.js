@@ -38,23 +38,24 @@ const pokeForm = document.querySelector(".pokeForm")
 const search = document.querySelector(".search-bar");
 
 const main = document.querySelector(".main");
-const divContainer = document.createElement("div");
-divContainer.classList = "container";
-
-// ------ Created items ------
-let title = document.createElement("h2");
-let pokeTypeOne = document.createElement("p");
-let pokeTypeTwo = document.createElement("p");
-pokeTypeOne.classList = "type";
-pokeTypeTwo.classList = "type";
-
-let pokeImg = document.createElement("img");
-pokeImg.classList.add("pokeImg");
-
-let pokeDescription = document.createElement("p");
-
 
 pokeForm.addEventListener("submit", (e) => {
+    // ------ Created items ------
+    const divContainer = document.createElement("div");
+    divContainer.classList = "container";
+
+    let title = document.createElement("h2");
+    let pokeTypeOne = document.createElement("p");
+    let pokeTypeTwo = document.createElement("p");
+    pokeTypeOne.classList = "type";
+    pokeTypeTwo.classList = "type";
+
+    let pokeImg = document.createElement("img");
+    pokeImg.classList.add("pokeImg");
+
+    let pokeDescription = document.createElement("p");
+    pokeDescription.classList.add("description");
+
     e.preventDefault();
 
     const val = Number(search.value);
@@ -76,17 +77,12 @@ pokeForm.addEventListener("submit", (e) => {
     pokeDescription.innerText = pokemon.description;
 
     search.value = "";
+
+    divContainer.appendChild(title);
+    divContainer.appendChild(pokeImg);
+    divContainer.appendChild(pokeTypeOne);
+    divContainer.appendChild(pokeTypeTwo);
+    divContainer.appendChild(pokeDescription);
+    main.appendChild(divContainer);
+
 });
-
-if(pokeTypeOne.value === "Grass"){
-    type.style.backgroundColor = "green" 
-}
-
-
-divContainer.appendChild(title);
-divContainer.appendChild(pokeImg);
-divContainer.appendChild(pokeTypeOne);
-divContainer.appendChild(pokeTypeTwo);
-divContainer.appendChild(pokeDescription);
-
-main.appendChild(divContainer);
