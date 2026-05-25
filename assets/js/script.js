@@ -43,8 +43,9 @@ pokeForm.addEventListener("submit", (e) => {
     // ------ Created items ------
     const divContainer = document.createElement("div");
     divContainer.classList = "container";
-
     let title = document.createElement("h2");
+    let types = document.createElement("div");
+    types.classList.add("types");
     let pokeTypeOne = document.createElement("p");
     let pokeTypeTwo = document.createElement("p");
     pokeTypeOne.classList = "type";
@@ -78,10 +79,12 @@ pokeForm.addEventListener("submit", (e) => {
 
     search.value = "";
 
+    // --------- Appended elements ---------
     divContainer.appendChild(title);
     divContainer.appendChild(pokeImg);
-    divContainer.appendChild(pokeTypeOne);
-    divContainer.appendChild(pokeTypeTwo);
+    divContainer.appendChild(types);
+    types.appendChild(pokeTypeOne);
+    types.appendChild(pokeTypeTwo);
     divContainer.appendChild(pokeDescription);
     main.appendChild(divContainer);
 
