@@ -79,6 +79,28 @@ pokeForm.addEventListener("submit", (e) => {
 
     search.value = "";
 
+    switch(pokemon.type1){
+        case "Grass":
+            pokeTypeOne.style.backgroundColor = "Green";
+            pokeTypeOne.style.color = "White";
+            break;
+        case "Poison":
+            pokeTypeOne.style.backgroundColor = "Purple";
+            pokeTypeOne.style.color = "White";
+            break;
+    }
+
+    switch(pokemon.type2){
+        case "Grass":
+            pokeTypeTwo.style.backgroundColor = "Green";
+            pokeTypeTwo.style.color = "White";
+            break;
+        case "Poison":
+            pokeTypeTwo.style.backgroundColor = "Purple";
+            pokeTypeTwo.style.color = "White";
+            break;
+    }
+
     // --------- Appended elements ---------
     divContainer.appendChild(title);
     divContainer.appendChild(pokeImg);
