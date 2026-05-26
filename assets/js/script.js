@@ -71,6 +71,30 @@ pokedex = [
         description: "It deliberately increases its body weight so it can withstand the recoil of the water jets it fires.",
         image: "assets/images/pokemons/0009.png"
     },
+    {
+        id: 10,
+        name: "Caterpie",
+        type1: "Bug",
+        type2: "",
+        description: "For protection, it releases a horrible stench from the antenna on its head to drive away enemies.",
+        image: "assets/images/pokemons/0010.png"
+    },
+    {
+        id: 11,
+        name: "Metapod",
+        type1: "Bug",
+        type2: "",
+        description: "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.",
+        image: "assets/images/pokemons/0011.png"
+    },
+    {
+        id: 12,
+        name: "Butterfree",
+        type1: "Bug",
+        type2: "Flying",
+        description: "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
+        image: "assets/images/pokemons/0012.png"
+    },
 ]
 
 // ------ Selectors ------
@@ -133,11 +157,15 @@ pokeForm.addEventListener("submit", (e) => {
             pokeTypeOne.style.color = "White";
             break;
         case "Flying":
-            pokeTypeOne.style.backgroundColor = "#00d2ff";
+            pokeTypeOne.style.backgroundColor = "#79bcd7";
             pokeTypeOne.style.color = "White";
             break;
         case "Water":
             pokeTypeOne.style.backgroundColor = "#0094e5";
+            pokeTypeOne.style.color = "White";
+            break;
+        case "Bug":
+            pokeTypeOne.style.backgroundColor = "#32b432";
             pokeTypeOne.style.color = "White";
             break;
     }
@@ -156,11 +184,15 @@ pokeForm.addEventListener("submit", (e) => {
             pokeTypeTwo.style.color = "White";
             break;
         case "Flying":
-            pokeTypeTwo.style.backgroundColor = "#00d2ff";
+            pokeTypeTwo.style.backgroundColor = "#79bcd7";
             pokeTypeTwo.style.color = "White";
             break;
         case "Water":
             pokeTypeTwo.style.backgroundColor = "#0094e5";
+            pokeTypeTwo.style.color = "White";
+            break;
+        case "Bug":
+            pokeTypeTwo.style.backgroundColor = "#32b432";
             pokeTypeTwo.style.color = "White";
             break;
     }
