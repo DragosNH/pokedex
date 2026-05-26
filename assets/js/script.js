@@ -30,7 +30,47 @@ pokedex = [
         type2: "",
         description: "The flame on its tail shows the strength of its life-force. If Charmander is weak, the flame also burns weakly.",
         image: "assets/images/pokemons/0004.png"
-    }
+    },
+    {
+        id: 5,
+        name: "Charmeleon",
+        type1: "Fire",
+        type2: "",
+        description: "When it swings its burning tail, the temperature around it rises higher and higher, tormenting its opponents.",
+        image: "assets/images/pokemons/0005.png"
+    },
+    {
+        id: 6,
+        name: "Charizard",
+        type1: "Fire",
+        type2: "Flying",
+        description: "If Charizard becomes truly angered, the flame at the tip of its tail burns in a light blue shade.",
+        image: "assets/images/pokemons/0006.png"
+    },
+    {
+        id: 7,
+        name: "Squirtle",
+        type1: "Water",
+        type2: "",
+        description: "After birth, its back swells and hardens into a shell. It sprays a potent foam from its mouth.",
+        image: "assets/images/pokemons/0007.png"
+    },
+    {
+        id: 8,
+        name: "Wartortle",
+        type1: "Water",
+        type2: "",
+        description: "Wartortle's long, furry tail is a symbol of longevity, so this Pokémon is quite popular among older people.",
+        image: "assets/images/pokemons/0008.png"
+    },
+    {
+        id: 9,
+        name: "Charizard",
+        type1: "Water",
+        type2: "",
+        description: "It deliberately increases its body weight so it can withstand the recoil of the water jets it fires.",
+        image: "assets/images/pokemons/0009.png"
+    },
 ]
 
 // ------ Selectors ------
@@ -81,30 +121,46 @@ pokeForm.addEventListener("submit", (e) => {
 
     switch (pokemon.type1) {
         case "Grass":
-            pokeTypeOne.style.backgroundColor = "Green";
+            pokeTypeOne.style.backgroundColor = "#92bf19";
             pokeTypeOne.style.color = "White";
             break;
         case "Poison":
-            pokeTypeOne.style.backgroundColor = "Purple";
+            pokeTypeOne.style.backgroundColor = "#be78be";
             pokeTypeOne.style.color = "White";
             break;
         case "Fire":
-            pokeTypeOne.style.backgroundColor = "Darkorange";
+            pokeTypeOne.style.backgroundColor = "#ff3700";
+            pokeTypeOne.style.color = "White";
+            break;
+        case "Flying":
+            pokeTypeOne.style.backgroundColor = "#00d2ff";
+            pokeTypeOne.style.color = "White";
+            break;
+        case "Water":
+            pokeTypeOne.style.backgroundColor = "#0094e5";
             pokeTypeOne.style.color = "White";
             break;
     }
 
     switch (pokemon.type2) {
         case "Grass":
-            pokeTypeTwo.style.backgroundColor = "Green";
+            pokeTypeTwo.style.backgroundColor = "#92bf19";
             pokeTypeTwo.style.color = "White";
             break;
         case "Poison":
-            pokeTypeTwo.style.backgroundColor = "Purple";
+            pokeTypeTwo.style.backgroundColor = "#be78be";
             pokeTypeTwo.style.color = "White";
             break;
         case "Fire":
-            pokeTypeTwo.style.backgroundColor = "Orange";
+            pokeTypeTwo.style.backgroundColor = "#ff3700";
+            pokeTypeTwo.style.color = "White";
+            break;
+        case "Flying":
+            pokeTypeTwo.style.backgroundColor = "#00d2ff";
+            pokeTypeTwo.style.color = "White";
+            break;
+        case "Water":
+            pokeTypeTwo.style.backgroundColor = "#0094e5";
             pokeTypeTwo.style.color = "White";
             break;
     }
