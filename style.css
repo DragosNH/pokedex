@@ -1,0 +1,164 @@
+:root {
+    --dark-blue: #3c5aa6;
+    --yellow-shadow: #c7a008;
+    --light-blue: #2a75bb;
+    --yellow: #ffcb05;
+    --white: #f5f5f5;
+}
+
+
+body {
+    margin: 0;
+    background-image: url(../images/background.png);
+    height: 100vh;
+    overflow: hidden;
+    font-size: 1.4em;
+}
+
+h2{
+    color: var(--yellow);
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: color-mix(in srgb, var(--yellow) 50%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.topnav img {
+    width: 200px;
+    margin-left: 25px;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 25px;
+    font-size: 17px;
+}
+
+/* Created elements */
+.container{
+    background-color: color-mix(in srgb, var(--white) 35%, transparent);
+    width: 40vw;
+    margin-top: 5%;
+}
+
+
+.firstLine{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.types{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin: 5px;
+}
+
+.typeElements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.type{
+    margin: 5px;
+}
+
+
+/* Image containers */
+
+.firstImgContainer{
+    background-color: color-mix(in srgb, var(--white) 45%, transparent);
+    /* padding: 35px; */
+    border-radius: 50%;
+}
+
+@keyframes rotateCW {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateCCW {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.secondImgContainer {
+    border: 10px solid var(--white);
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 15px var(--white);
+    transform-origin: center center;
+
+    animation: rotateCW 4s ease-in-out infinite;
+}
+
+
+.thirdImgContainer {
+    border: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 15px var(--white);
+    transform-origin: center center;
+    animation: rotateCCW 4s ease-in-out infinite;
+}
+
+
+.pokeImg{
+    width: 250px;
+    display: block;
+    transform: none !important;
+}
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 97.5%;
+    bottom: 0;
+    background-color: color-mix(in srgb, var(--light-blue) 70%, transparent);
+    padding: 5px 25px;
+    color: var(--yellow);
+    font-size: 0.7em;
+}
+
+footer img {
+    width: 150px;
+}
+
+footer a{
+    color: var(--yellow);
+}
+
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
